@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation using css</title>
+    <style>
+        .parent{
+            height:800px;
+            width:800px;
+            /* background-color: blue; */
+        }
+        .child{
+            /* background-color:green; */
+            height: 50%;
+            width: 50%;
+        }
+        .parent:hover .child{
+            animation: left-to-right 3s infinite forwards;
+
+        }
+        @keyframes left-to-right{
+            0%{
+                transform: translateX(0%);
+                /* background-color: red; */
+            }
+            10%{
+                transform: translateY(40%);
+                /* background-color: pink; */
+            }
+            33%{
+                transform: translateY(100%);
+                
+            }
+            66%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(1%);
+            }
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+            <div class="parent">
+                <div class="child">
+                            <img src="https://i.pinimg.com/474x/ed/5b/09/ed5b090194ce71613ce5a0234a4c1dd0.jpg" alt="">
+                </div>
+            </div>
+</body>
+</html>
